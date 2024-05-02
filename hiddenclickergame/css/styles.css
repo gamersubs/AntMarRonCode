@@ -26,6 +26,9 @@ body {
 .shop-container {
     text-align: left;
 }
+.menu-container {
+    text-align: center;
+}
 button {
     padding: 10px 20px;
     background-color: #007bff;
