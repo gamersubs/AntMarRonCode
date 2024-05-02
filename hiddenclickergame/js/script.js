@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let clickCount = 0;
+    let clickCount = saveCount;
     let clickMultiplier = 1;
     let clickMultiplierCost = 10;
     let autoClickerCost = 100;
