@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let autoClickerCount = 0;
     let autoClickerInterval;
     let x = document.cookie;
-    updateClickCountDisplay();
 
     const clickButton = document.getElementById('clickButton');
     const clickCountDisplay = document.getElementById('clickCount');
