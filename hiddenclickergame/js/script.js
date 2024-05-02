@@ -1,4 +1,3 @@
-document.cookie = "test=10";
 document.addEventListener('DOMContentLoaded', function() {
     let clickCount = 0;
     let clickMultiplier = 1;
@@ -15,6 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     clickButton.addEventListener('click', () => {
         clickCount += clickMultiplier;
         updateClickCountDisplay();
+
     });
 
     clickMultiplierButton.addEventListener('click', () => {
@@ -51,5 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateClickCountDisplay() {
         clickCountDisplay.textContent = clickCount.toFixed(1);
+        document.cookie = "saveCount=clickCount"
     }    
 });
