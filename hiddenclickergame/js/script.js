@@ -52,6 +52,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function updateClickCountDisplay() {
         clickCountDisplay.textContent = clickCount.toFixed(1);
-        document.cookie = "saveCount=clickCount"
+        document.cookie = "clickCount=${clickCount}"
     }    
 });
