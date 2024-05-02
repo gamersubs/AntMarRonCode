@@ -1,11 +1,39 @@
 document.addEventListener('DOMContentLoaded', function() {
-    let clickCount = saveCount;
+    let clickCount = 0;
     let clickMultiplier = 1;
     let clickMultiplierCost = 10;
     let autoClickerCost = 100;
     let autoClickerCount = 0;
     let autoClickerInterval;
     let x = document.cookie;
+
+    document.addEventListener('DOMContentLoaded', function() {
+        let clickCount = 0;
+        const clickCountDisplay = document.getElementById('clickCount');
+    
+        // Function to update click count display
+        function updateClickCountDisplay() {
+            clickCountDisplay.textContent = clickCount.toFixed(1);
+        }
+    
+        // Function to load click count from cookies
+        function loadClickCountFromCookies() {
+            const cookies = document.cookie.split(';');
+            for (let cookie of cookies) {
+                const [name, value] = cookie.trim().split('=');
+                if (name === 'clickCount') {
+                    clickCount = parseFloat(value);
+                    updateClickCountDisplay();
+                    break;
+                }
+            }
+        }
+    
+        // Load click count from cookies when the page loads
+        loadClickCountFromCookies();
+    
+        // Add event listeners and other functionality as needed
+    });    
 
     const clickButton = document.getElementById('clickButton');
     const clickCountDisplay = document.getElementById('clickCount');
