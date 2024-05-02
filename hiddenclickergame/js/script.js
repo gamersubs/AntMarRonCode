@@ -1,3 +1,4 @@
+document.cookie = "test=10";
 document.addEventListener('DOMContentLoaded', function() {
     let clickCount = 0;
     let clickMultiplier = 1;
